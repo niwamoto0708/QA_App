@@ -32,6 +32,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.aternity.sdk.Aternity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
@@ -122,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Aternity.getInstance().init(this, R.raw.aternity);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
